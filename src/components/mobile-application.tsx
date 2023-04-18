@@ -40,7 +40,7 @@ const AvailableOnSection: React.FC = () => {
               <CustomButton
                 sx={{
                   maxWidth: "98px",
-                  width: "100%",
+                  width: "62px !important",
                   fontFamily: "Nunito Sans !important",
                   fontSize: "0.875rem",
                   color: "#000",
@@ -50,6 +50,7 @@ const AvailableOnSection: React.FC = () => {
                   textTransform: "capitalize",
                   borderRadius: "0px !important",
                   fontWeight: 700,
+                  height: "31px !important",
 
                   "&:hover": {
                     backgroundColor: "#fff !important",
@@ -86,7 +87,8 @@ const AvailableOnSection: React.FC = () => {
                 fontSize: "14px",
               }}
             >
-              foodfood <br /> Business Partner
+              foodfood <br />{" "}
+              <span style={{ fontSize: "10px" }}>Business Partner</span>
             </Typography>
           </Box>
         </Box>

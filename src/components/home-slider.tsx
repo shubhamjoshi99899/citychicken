@@ -12,7 +12,7 @@ const responsive = {
   },
   desktop: {
     breakpoint: { max: 3000, min: 1500 },
-    items: 3.5,
+    items: 3.6,
   },
   laptop: {
     breakpoint: { max: 1500, min: 1024 },
@@ -39,7 +39,6 @@ const HomeSlider = () => {
         <Box key={index}>
           <div
             style={{
-              marginLeft: 5,
               width: "412px !important",
               height: "413px !important",
             }}
@@ -50,6 +49,7 @@ const HomeSlider = () => {
                 marginLeft: 5,
                 width: "412px !important",
                 height: "413px !important",
+                objectFit: "inherit",
               }}
             />
           </div>

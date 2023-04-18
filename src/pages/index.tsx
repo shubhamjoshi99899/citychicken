@@ -318,7 +318,7 @@ const LandingPage: React.FC = () => {
                   <CustomButton
                     sx={{
                       maxWidth: "98px",
-                      width: "100%",
+                      width: "62px !important",
                       fontFamily: "Nunito Sans !important",
                       fontSize: "0.875rem",
                       color: "#000",
@@ -328,6 +328,7 @@ const LandingPage: React.FC = () => {
                       textTransform: "capitalize",
                       borderRadius: "0px !important",
                       fontWeight: 600,
+                      height: "32px !important",
 
                       "&:hover": {
                         backgroundColor: "#fff !important",
@@ -364,7 +365,8 @@ const LandingPage: React.FC = () => {
                     fontSize: "14px",
                   }}
                 >
-                  foodfood <br /> Business Partner
+                  foodfood <br />{" "}
+                  <span style={{ fontSize: "10px" }}>Business Partner</span>
                 </Typography>
               </Box>
             </Toolbar>

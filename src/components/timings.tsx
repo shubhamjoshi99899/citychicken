@@ -11,7 +11,7 @@ const Timings = () => {
   return (
     <div>
       <div>
-        <Container sx={{ px: "0 !important" }} maxWidth="lg">
+        <Container sx={{ px: "0 !important" }} maxWidth="md">
           <Typography
             sx={{
               flexGrow: 1,
@@ -29,7 +29,7 @@ const Timings = () => {
         </Container>
       </div>
       <Container
-        maxWidth="lg"
+        maxWidth="md"
         sx={{ pr: "0px important", mr: "0px important" }}
       >
         <Grid container px={0} spacing={8}>
