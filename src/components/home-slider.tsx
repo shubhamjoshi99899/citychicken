@@ -11,7 +11,11 @@ const responsive = {
     items: 5,
   },
   desktop: {
-    breakpoint: { max: 3000, min: 1024 },
+    breakpoint: { max: 3000, min: 1500 },
+    items: 3.5,
+  },
+  laptop: {
+    breakpoint: { max: 1500, min: 1024 },
     items: 3,
   },
   tablet: {
@@ -33,8 +37,21 @@ const HomeSlider = () => {
     <Carousel responsive={responsive}>
       {images.map((image, index) => (
         <Box key={index}>
-          <div className="block mx-5 mt-6 h-48 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-50 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-            <img src={image} style={{ borderRadius: "10px" }} />
+          <div
+            style={{
+              marginLeft: 5,
+              width: "412px !important",
+              height: "413px !important",
+            }}
+          >
+            <img
+              src={image}
+              style={{
+                marginLeft: 5,
+                width: "412px !important",
+                height: "413px !important",
+              }}
+            />
           </div>
         </Box>
       ))}

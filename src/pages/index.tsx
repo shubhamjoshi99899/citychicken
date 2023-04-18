@@ -29,6 +29,8 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import AvailableOnSection from "@/components/mobile-application";
 import { colors } from "@/data/colors";
+import Footer from "@/components/footer";
+import ImageSlider from "@/components/home-slider";
 interface Props {
   window?: () => Window;
 }
@@ -239,29 +241,41 @@ const LandingPage: React.FC = () => {
                 display: { md: "none", lg: "flex", sm: "none", xs: "none" },
               }}
             >
-              <Typography
-                textAlign={"left"}
-                sx={{
-                  px: 5,
-                  flexGrow: 1,
-                  color: "#fff",
-                  fontSize: "2rem",
-                  fontWeight: 400,
-                  fontFamily: "Contrail One !important",
-                }}
-              >
-                City Chicken <br />{" "}
-                <span style={{ fontSize: "0.875rem", marginBottom: "-20px" }}>
+              <Box sx={{ textAlign: "left" }}>
+                <Typography
+                  textAlign={"left"}
+                  sx={{
+                    px: 5,
+                    flexGrow: 1,
+                    color: "#fff",
+                    fontSize: "40px",
+                    fontWeight: 400,
+                    fontFamily: "Contrail One !important",
+                  }}
+                >
+                  City Chicken{" "}
+                </Typography>
+                <Typography
+                  sx={{
+                    px: 5,
+                    flexGrow: 1,
+                    color: "#fff",
+                    fontWeight: 400,
+                    fontFamily: "Contrail One !important",
+                    fontSize: "0.875rem",
+                  }}
+                >
                   Das Original seit 1996
-                </span>
-              </Typography>
+                </Typography>
+              </Box>
               <Box
                 sx={{
                   display: "flex",
                   justifyContent: "space-between",
                   alignItems: "flex-end",
                   marginBottom: { xs: 2, sm: 0 },
-                  flexGrow: 1,
+                  flexGrow: 2,
+                  ml: 10,
                 }}
               >
                 <Box>
@@ -274,9 +288,10 @@ const LandingPage: React.FC = () => {
                         marginRight: 2,
                         textTransform: "capitalize   !important",
                         color: "#fff",
-                        fontFamily: "inter",
+                        fontFamily: "Inter !important",
                         marginBottom: { xs: 0, sm: 0, md: -4 },
                         fontWeight: 400,
+                        fontSize: "14px",
                       }}
                       onClick={() => handleSectionClick(`${button}`)}
                     >
@@ -304,7 +319,7 @@ const LandingPage: React.FC = () => {
                     sx={{
                       maxWidth: "98px",
                       width: "100%",
-                      fontFamily: "League Spartan !important",
+                      fontFamily: "Nunito Sans !important",
                       fontSize: "0.875rem",
                       color: "#000",
                       padding: "10px 20px",
@@ -312,7 +327,7 @@ const LandingPage: React.FC = () => {
                       boxShadow: "none",
                       textTransform: "capitalize",
                       borderRadius: "0px !important",
-                      fontWeight: 400,
+                      fontWeight: 600,
 
                       "&:hover": {
                         backgroundColor: "#fff !important",
@@ -376,7 +391,7 @@ const LandingPage: React.FC = () => {
           <Container maxWidth="md" sx={{ pt: 10 }}>
             <About />
           </Container>
-          <SliderComponent />
+          <ImageSlider />
         </section>
         <section id="services" style={{}}>
           <Container maxWidth="md" sx={{ pt: 10 }}>
@@ -404,6 +419,7 @@ const LandingPage: React.FC = () => {
           </Box>
         </section>
       </Box>
+      <Footer />
     </>
   );
 };

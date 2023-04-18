@@ -31,7 +31,7 @@ const Service = () => {
       <Grid container>
         {services.map((data) => (
           <Grid
-            py={4}
+            pt={2}
             key={data.service}
             direction={"row"}
             item
@@ -46,11 +46,12 @@ const Service = () => {
               sx={{
                 borderBottom: "1px solid #f1f1f1",
                 mx: 2,
-                paddingBottom: "20px",
+                paddingBottom: "16px",
               }}
               gap={2}
             >
-              {data.icon}
+              <img src={data.icon} />
+
               <Typography
                 fontWeight={400}
                 sx={{ fontSize: "12px", fontFamily: "Inter" }}

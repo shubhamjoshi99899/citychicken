@@ -21,7 +21,7 @@ const Payments = () => {
       <Grid py={8} container>
         {payment.map((data) => (
           <Grid
-            py={2}
+            pt={2}
             key={data.name}
             direction={"row"}
             item
@@ -29,7 +29,6 @@ const Payments = () => {
             sm={12}
             md={6}
             lg={3}
-            sx={{}}
           >
             <Stack
               direction="row"
@@ -37,7 +36,7 @@ const Payments = () => {
               sx={{
                 borderBottom: "1px solid #f1f1f1",
                 mx: 2,
-                paddingBottom: "10px",
+                paddingBottom: "16px",
               }}
               gap={2}
             >

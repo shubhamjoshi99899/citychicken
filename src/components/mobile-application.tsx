@@ -41,7 +41,7 @@ const AvailableOnSection: React.FC = () => {
                 sx={{
                   maxWidth: "98px",
                   width: "100%",
-                  fontFamily: "League Spartan !important",
+                  fontFamily: "Nunito Sans !important",
                   fontSize: "0.875rem",
                   color: "#000",
                   padding: "10px 20px",
@@ -49,7 +49,7 @@ const AvailableOnSection: React.FC = () => {
                   boxShadow: "none",
                   textTransform: "capitalize",
                   borderRadius: "0px !important",
-                  fontWeight: 400,
+                  fontWeight: 700,
 
                   "&:hover": {
                     backgroundColor: "#fff !important",

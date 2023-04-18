@@ -54,11 +54,7 @@ const BerlinMap = () => {
               </Stack>
             </Grid>
             <Grid item xs={6} sx={{ borderBottom: "1px solid #f1f1f1", pb: 2 }}>
-              <Stack
-                direction="row"
-                sx={{ borderBottom: "1px solid #f1f1f1", pb: 2 }}
-                justifyContent="space-between"
-              >
+              <Stack direction="row" justifyContent="space-between">
                 <Typography>Email</Typography>
                 <Typography>{address.email}</Typography>
               </Stack>
