@@ -31,6 +31,7 @@ import AvailableOnSection from "@/components/mobile-application";
 import { colors } from "@/data/colors";
 import Footer from "@/components/footer";
 import ImageSlider from "@/components/home-slider";
+import { useRouter } from "next/router";
 interface Props {
   window?: () => Window;
 }
@@ -47,6 +48,7 @@ const navItems = [
 const LandingPage: React.FC = () => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [activeSection, setActiveSection] = useState<string>("restaurant");
+  const router = useRouter();
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -108,6 +110,12 @@ const LandingPage: React.FC = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+  const isBrowser = () => typeof window !== "undefined";
+
+  const handleRefresh = () => {
+    if (!isBrowser()) return;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const buttons = [
     "restaurant",
@@ -116,6 +124,7 @@ const LandingPage: React.FC = () => {
     "offnungszeiten",
     "standort",
   ];
+
   return (
     <>
       <Head>
@@ -221,6 +230,7 @@ const LandingPage: React.FC = () => {
               sx={{
                 display: { xs: "none", sm: "none", md: "none", lg: "flex" },
               }}
+              onClick={handleRefresh}
             >
               <img
                 src="/logo.svg"
@@ -373,7 +383,7 @@ const LandingPage: React.FC = () => {
           </>
         </AppBar>
 
-        <section id="restaurant" style={{}}>
+        <section id="" style={{}}>
           <Box sx={{ pt: 0 }}>
             <Box
               sx={{
@@ -389,25 +399,31 @@ const LandingPage: React.FC = () => {
             ></Box>
           </Box>
         </section>
-        <section id="speisekarte" style={{}}>
+        <section id="restaurant" style={{}}>
           <Container maxWidth="md" sx={{ pt: 10 }}>
             <About />
           </Container>
           <ImageSlider />
         </section>
-        <section id="services" style={{}}>
+        <section id="speisekarte" style={{}}>
           <Container maxWidth="md" sx={{ pt: 10 }}>
             <AvailableOnSection />
+          </Container>
+        </section>
+        <section
+          id="services"
+          style={{ backgroundColor: "#fff", minHeight: "100vh" }}
+        >
+          <Container maxWidth="md" sx={{ pt: 10 }}>
             <Service />
+
+            <Payments />
           </Container>
         </section>
         <section
           id="offnungszeiten"
           style={{ backgroundColor: "#fff", minHeight: "100vh" }}
         >
-          <Container maxWidth="md" sx={{ pt: 10 }}>
-            <Payments />
-          </Container>
           <Container sx={{ pt: 10 }}>
             <Timings />
           </Container>
